@@ -1,0 +1,76 @@
+/* Table styles */
+.container {
+    max-width: 100%;
+    background-color: black;
+    color: white;
+    height: 100vh;
+}
+#student-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  #student-table th,
+  #student-table td {
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid white;
+  }
+  
+  #student-table th {
+    font-weight: bold;
+  }
+  
+  /* #student-table tr:nth-child(even) {
+    background-color: #f5efef;
+  } */
+
+  #student-form {
+    /* max-width: 600px; */
+    margin: 0 auto;
+    /* display: flex; */
+
+  }
+  
+  #student-form h2 {
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  
+  
+  #student-form input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  #student-form button {
+    display: block;
+    width: 40%;
+    margin-left: 15px;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+  }
+
+  #search-box {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  #student-form button:hover {
+    background-color: #3e8e41;
+  }
+
+ .edit-icon , .delete-icon{
+  cursor: pointer;
+  margin: 0px 5px;
+ }
