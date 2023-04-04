@@ -66,21 +66,7 @@ let showData = () => {
   });
 };
 
-// let editData = (id) => {
-//   let student = students.find((s) => s.ID == id);
 
-//   // Populate form fields with data of selected row
-//   nameInput.value = student.Name;
-//   email.value = student.Email;
-//   gpa.value = student.GPA;
-//   age.value = student.Age;
-//   degree.value = student.Degree;
-
-//   // Change submit button to update button
-//   addButton.style.display = "none";
-//   updateButton.style.display = "inline-block";
-//   updateButton.dataset.id = id;
-// };
 
 function editData(id) {
   const student = students.find((student) => student.ID == id);
@@ -134,10 +120,7 @@ searchBox.addEventListener("input", (e) => {
       student.Degree.toLowerCase().includes(searchString)
   );
 
-  // Remove all existing rows from the table
-  // while (tbody.firstChild) {
-  //   tbody.removeChild(tbody.firstChild);
-  // }
+  
   let tbody = table.getElementsByTagName("tbody")[0];
   tbody.innerHTML = "";
 
@@ -163,104 +146,10 @@ searchBox.addEventListener("input", (e) => {
   });
 });
 
-// const searchBox = document.getElementById("search-box");
 
-// searchBox.addEventListener("input", (e) => {
-//   const searchString = e.target.value.toLowerCase();
-//   console.log(searchString)
-//   const filteredStudents = students.filter(
-//     (student) =>
-//       student.Name.toLowerCase().includes(searchString) ||
-//       student.Email.toLowerCase().includes(searchString) ||
-//       student.Degree.toLowerCase().includes(searchString)
-//   );
-//   filteredStudents.forEach((student, index) => {
-//     let row = tbody.insertRow();
-//     row.insertCell().textContent = index + 1;
-//     row.insertCell().textContent = student.Name;
-//     row.insertCell().textContent = student.Email;
-//     row.insertCell().textContent = student.Age;
-//     row.insertCell().textContent = student.GPA;
-//     // row.insertCell().textContent = student.Degree;
-//     let degreeCell = row.insertCell();
-//     let degreeText = document.createTextNode(student.Degree + " ");
-//     degreeCell.appendChild(degreeText);
 
-//     let pencilIcon = document.createElement("i");
-//     pencilIcon.classList.add("fa", "fa-pencil", "edit-icon");
-//     pencilIcon.addEventListener("click", () => editData(student.ID));
-//     degreeCell.appendChild(pencilIcon);
 
-//     let trashIcon = document.createElement("i");
-//     trashIcon.classList.add("fa", "fa-trash", "delete-icon");
-//     trashIcon.addEventListener("click", () => deleteData(student.ID));
-//     degreeCell.appendChild(trashIcon);
-//   });
-// });
 
-// let searchBox = document.getElementById("search-box");
 
-// searchBox.addEventListener("input", () => {
-//   let searchValue = searchBox.value.toLowerCase();
-//   let filteredStudents = [];
 
-//   students.forEach((student) => {
-//     if (
-//       student.Name.toLowerCase().includes(searchValue) ||
-//       student.Email.toLowerCase().includes(searchValue) ||
-//       student.Degree.toLowerCase().includes(searchValue)
-//     ) {
-//       filteredStudents.push(student);
-//     }
-//   });
 
-//   clearTable();
-//   filteredStudents.forEach((student, index) => {
-//     let row = tbody.insertRow();
-//     row.insertCell().textContent = index + 1;
-//     row.insertCell().textContent = student.Name;
-//     row.insertCell().textContent = student.Email;
-//     row.insertCell().textContent = student.Age;
-//     row.insertCell().textContent = student.GPA;
-//     // row.insertCell().textContent = student.Degree;
-//     let degreeCell = row.insertCell();
-//     let degreeText = document.createTextNode(student.Degree + " ");
-//     degreeCell.appendChild(degreeText);
-
-//     let pencilIcon = document.createElement("i");
-//     pencilIcon.classList.add("fa", "fa-pencil", "edit-icon");
-//     pencilIcon.addEventListener("click", () => editData(student.ID));
-//     degreeCell.appendChild(pencilIcon);
-
-//     let trashIcon = document.createElement("i");
-//     trashIcon.classList.add("fa", "fa-trash", "delete-icon");
-//     trashIcon.addEventListener("click", () => deleteData(student.ID));
-//     degreeCell.appendChild(trashIcon);
-//   });
-// });
-
-// function clearTable() {
-//   let tableRows = document.querySelectorAll("#student-table tbody tr");
-//   tableRows.forEach((row) => row.remove());
-// }
-
-// const headings = ["ID", "Name", "Age", "Grade", "Degree", "Email"];
-// let students = [
-//     { ID: 1, name: 'Alice', age: 21, grade: 'A', degree: 'Btech', email: 'alice@example.com' },
-//     { ID: 2, name: 'Bob', age: 22, grade: 'B', degree: 'MBA', email: 'bob@example.com' },
-//     { ID: 3, name: 'Charlie', age: 20, grade: 'C', degree:'Arts', email: 'charlie@example.com' }
-//   ];
-
-// headings.forEach((heading) => {
-//   const th = document.createElement("th");
-//   th.textContent = heading;
-//   row.appendChild(th);
-// });
-// students.forEach((student) => {
-//     const row = table.insertRow();
-
-//     for (const key in student) {
-//       const cell = row.insertCell();
-//       cell.textContent = student[key];
-//     }
-//   });
